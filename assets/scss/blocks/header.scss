@@ -18,19 +18,40 @@
         column-gap: 35px;
     }
 
-    &__search-input {
+    .ui-widget {
+        position: relative;
+    }
+
+    .ui-autocomplete-input {
+        font-family: 'Gotham Pro' !important;
         width: 350px;
         height: 55px;
         border: 1px solid #dcdcdc;
         border-radius: 25px;
         padding-left: 20px;
         background-color: #dcdcdc;
+        font-size: 18px;
+        line-height: 10px;
+        font-weight: 400;
+        font-style: italic;
     }
 
     &__search-input:focus {
         background-color: #fff;
         outline: none;
         border: 2px solid black;
+    }
+
+    &__submit-button {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+        width: 26px;
+        height: 25px;
+        background-image: url('/assets/img/icons/search.png');
+        background-size: contain;
+        background-position: center;
+        cursor: pointer;
     }
 
     &__navigation {
@@ -106,6 +127,62 @@
         background-image: url('/assets/img/social/Instagram-hover.png');
     }
 
+}
+
+ul.ui-autocomplete {
+    width: 322px !important;
+    border-radius: 10px 10px 0px 0px !important;
+    border: 1px solid #000000 !important;
+    font-family: 'Gotham Pro' !important;
+    font-size: 16px !important;
+    line-height: 10px !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+}
+
+ul.ui-autocomplete li:not(:last-child) {
+    border-bottom: 1px solid #000000;
+}
+
+ul.ui-autocomplete li {
+    width: 322px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+ul.ui-autocomplete li div {
+    width: 322px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+ul.ui-autocomplete li:first-child div {
+    border-radius: 10px 10px 0px 0px !important;
+}
+
+ul.ui-autocomplete li:hover div {
+    background-color: #cccccc;
+    border-color: black !important;
+    color: black !important;
+}
+
+ul.ui-autocomplete li:active div{
+    background-color: #cccccc !important;
+    border-color: black !important;
+    color: black !important;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border-color: black !important;
+	background: #cccccc;
+    color: black !important;
 }
 
 /* ! ADAPTIVE FOR IPHONE */

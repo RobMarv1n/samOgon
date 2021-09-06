@@ -15,9 +15,11 @@
 				<img class="main-header__logo-img" src="assets/img/logo.png" width="500" height="80" alt="Логотип сайта СамОгонь">
 			</a>
 			<form class="main-header__search" action="#" method="POST">
-				<label for="search">
-					<input class="main-header__search-input" type="search" id="search" placeholder="Я ищу...">
-				</label>
+				<div class="ui-widget">
+					<label for="search"></label>
+					<input class="main-header__search-input" type="search" id="search" placeholder="Я ищу..." autocomplete="off">
+					<button class="main-header__submit-button" type="submit"></button>
+				</div>
 			</form>
 			<nav class="main-header__navigation">
 				<ul class="main-header__navigation-list">
@@ -123,91 +125,106 @@
 			<section class="popular-products">
 			<div class="popular-products__container container">
 				<h2 class="popular-products__title"><span class="red">Популярные</span> товары</h2>
-				<div class="popular-products__wrapper swiper-container">
-					<ul class="popular-products__list swiper-wrapper">
-						<li class="popular-products__item swiper-slide">
-							<div class="popular-products__item-container">
-								<div class="popular-products__item-image-container">
-									<img class="popular-products__item-image" src="/assets/img/goods/beer_mug.png" alt="Кружка для пива 0,5л">
+				<div class="popular-products__wrapper">
+					<div class="popular-products__slider swiper-container">
+						<ul class="popular-products__list swiper-wrapper">
+							<li class="popular-products__item swiper-slide">
+								<div class="popular-products__item-container">
+									<div class="popular-products__item-image-container">
+										<img class="popular-products__item-image" src="/assets/img/goods/beer_mug.png" alt="Кружка для пива 0,5л">
+									</div>
+									<p class="popular-products__item-description">Кружка для пива<br> 0,5 л</p>
+									<p class="popular-products__item-price">160 <span>₽</span></p>
+									<a class="popular-products__detail-button button" href="#">подробнее</a>
 								</div>
-								<p class="popular-products__item-description">Кружка для пива<br> 0,5 л</p>
-								<p class="popular-products__item-price">160 <span>₽</span></p>
-							</div>
-						</li>
-						<li class="popular-products__item swiper-slide">
-							<div class="popular-products__item-container">
-								<div class="popular-products__item-image-container">
-									<img class="popular-products__item-image" src="/assets/img/goods/beer_mug.png" alt="Кружка для пива 0,5л">
+							</li>
+							<li class="popular-products__item swiper-slide">
+								<div class="popular-products__item-container">
+									<div class="popular-products__item-image-container">
+										<img class="popular-products__item-image" src="/assets/img/goods/wine_set.png" alt="Кружка для пива 0,5л">
+									</div>
+									<p class="popular-products__item-description">Винный набор 
+										"Фруктовый Восторг"</p>
+									<p class="popular-products__item-price">1200 <span>₽</span></p>
+									<a class="popular-products__detail-button button" href="#">подробнее</a>
 								</div>
-								<p class="popular-products__item-description">Кружка для пива 0,5 л</p>
-								<p class="popular-products__item-price">160 <span>₽</span></p>
-							</div>
-						</li>
-						<li class="popular-products__item swiper-slide">
-							<div class="popular-products__item-container">
-								<div class="popular-products__item-image-container">
-									<img class="popular-products__item-image" src="/assets/img/goods/beer_mug.png" alt="Кружка для пива 0,5л">
+							</li>
+							<li class="popular-products__item swiper-slide">
+								<div class="popular-products__item-container">
+									<div class="popular-products__item-image-container">
+										<img class="popular-products__item-image" src="/assets/img/goods/malt.png" alt="Кружка для пива 0,5л">
+									</div>
+									<p class="popular-products__item-description">Солод ячменный "Карамельный 50" 1 кг</p>
+									<p class="popular-products__item-price">80 <span>₽</span></p>
+									<a class="popular-products__detail-button button" href="#">подробнее</a>
 								</div>
-								<p class="popular-products__item-description">Кружка для пива 0,5 л</p>
-								<p class="popular-products__item-price">160 <span>₽</span></p>
-							</div>
-						</li>
-					</ul>
-					<div class="current-news__slider-buttons">
-						<button class="current-news__slider-button current-news__slider-button--button-prev">
-						</button>
-						<button class="current-news__slider-button current-news__slider-button--button-next">
-						</button>
+							</li>
+						</ul>
 					</div>
-					<div class="swiper-pagination"></div>
+					<button class="popular-products__slider-button popular-products__slider-button--button-prev ">
+					</button>
+					<button class="popular-products__slider-button popular-products__slider-button--button-next">
+					</button>
 				</div>
+				<a class="popular-products__catalog-button button">Перейти в каталог</a>
 			</div>
 			</section>
-			<section class="popular-products">
-			<div class="popular-products__container container">
-				<h2 class="popular-products__title"><span class="red">Акционные</span> товары</h2>
-				<div class="popular-products__wrapper swiper-container">
-					<ul class="popular-products__list swiper-wrapper">
-						<li class="popular-products__item swiper-slide">
-							<div class="popular-products__item-container">
-								<div class="popular-products__item-image-container">
-									<img class="popular-products__item-image" src="/assets/img/goods/beer_mug.png" alt="Кружка для пива 0,5л">
+			<section class="discount-products">
+			<div class="discount-products__container container">
+				<h2 class="discount-products__title"><span class="red">Акционные</span> товары</h2>
+				<div class="discount-products__wrapper">
+					<div class="discount-products__slider swiper-container">
+						<ul class="discount-products__list swiper-wrapper">
+							<li class="discount-products__item swiper-slide">
+								<div class="discount-products__item-container">
+									<div class="discount-products__item-image-container">
+										<img class="discount-products__item-image" src="/assets/img/goods/capping_machine.png" alt="Кружка для пива 0,5л">
+									</div>
+									<p class="discount-products__item-description">Станок укупорка для пива</p>
+									<div class="discount-products__price-container">
+										<p class="discount-products__item-price">2195 <span>₽</span></p>
+										<p class="discount-products__item-discount-price">1980 <span>₽</span></p>
+									</div>
+									<a class="discount-products__detail-button button" href="#">подробнее</a>
 								</div>
-								<p class="popular-products__item-description">Кружка для пива<br> 0,5 л</p>
-								<p class="popular-products__item-price">160 <span>₽</span></p>
-							</div>
-						</li>
-						<li class="popular-products__item swiper-slide">
-							<div class="popular-products__item-container">
-								<div class="popular-products__item-image-container">
-									<img class="popular-products__item-image" src="/assets/img/goods/beer_mug.png" alt="Кружка для пива 0,5л">
+							</li>
+							<li class="discount-products__item swiper-slide">
+								<div class="discount-products__item-container">
+									<div class="discount-products__item-image-container">
+										<img class="discount-products__item-image" src="/assets/img/goods/grain_set.png" alt="Кружка для пива 0,5л">
+									</div>
+									<p class="discount-products__item-description">Зерновой набор “Аббатский Эль”</p>
+									<div class="discount-products__price-container">
+										<p class="discount-products__item-price">1 605 <span>₽</span></p>
+										<p class="discount-products__item-discount-price">1 200 <span>₽</span></p>
+									</div>
+									<a class="discount-products__detail-button button" href="#">подробнее</a>
 								</div>
-								<p class="popular-products__item-description">Кружка для пива 0,5 л</p>
-								<p class="popular-products__item-price">160 <span>₽</span></p>
-							</div>
-						</li>
-						<li class="popular-products__item swiper-slide">
-							<div class="popular-products__item-container">
-								<div class="popular-products__item-image-container">
-									<img class="popular-products__item-image" src="/assets/img/goods/beer_mug.png" alt="Кружка для пива 0,5л">
+							</li>
+							<li class="discount-products__item swiper-slide">
+								<div class="discount-products__item-container">
+									<div class="discount-products__item-image-container">
+										<img class="discount-products__item-image" src="/assets/img/goods/lactose.png" alt="Кружка для пива 0,5л">
+									</div>
+									<p class="discount-products__item-description">Лактоза 1 кг</p>
+									<div class="discount-products__price-container">
+										<p class="discount-products__item-price">210 <span>₽</span></p>
+										<p class="discount-products__item-discount-price">160 <span>₽</span></p>
+									</div>
+									<a class="discount-products__detail-button button" href="#">подробнее</a>
 								</div>
-								<p class="popular-products__item-description">Кружка для пива 0,5 л</p>
-								<p class="popular-products__item-price">160 <span>₽</span></p>
-							</div>
-						</li>
-					</ul>
-					<div class="current-news__slider-buttons">
-						<button class="current-news__slider-button current-news__slider-button--button-prev">
-						</button>
-						<button class="current-news__slider-button current-news__slider-button--button-next">
-						</button>
+							</li>
+						</ul>
 					</div>
-					<div class="swiper-pagination"></div>
+					<button class="discount-products__slider-button discount-products__slider-button--button-prev ">
+					</button>
+					<button class="discount-products__slider-button discount-products__slider-button--button-next">
+					</button>
 				</div>
+				<a class="discount-products__catalog-button button">Перейти в каталог</a>
 			</div>
 			</section>
 		</section>
-		
 	</main>
 
 	<footer class="main-footer">
@@ -232,9 +249,7 @@
 				</ul>
 			</nav>
 			<ul class="main-footer__social">
-				<li class="main-footer__social-item tel">
-					<a href="tel:+7(961)854-34-72">+7(961)854-34-72</a>
-				</li>
+				
 
 				<li class="main-footer__social-item whatsapp">
 					<a href=""></a>
@@ -244,11 +259,21 @@
 					<a href="https://www.instagram.com/"></a>
 				</li>
 			</ul>
+			<ul class="main-footer__contacts">
+				<li class="main-footer__contacts-item tel">
+					<a href="tel:+7(961)854-34-72">+7(961)854-34-72</a>
+				</li>
+				<li class="main-footer__contacts-item mail">
+					<a href="mailto:sam0goni@yandex.ru">sam0goni@yandex.ru</a>
+				</li>
+			</ul>
+			<p class="main-footer__copyright">2020 © “Самогонъ” - интернет-магазин для настоящих ценителей.<br>Все права защищены.</p>
 		</div>
 	</footer>
 
 	<script src="assets/jquery/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+	<script src="assets/jquery/jquery-ui.min.js"></script>
 	<script src="assets/jquery/script.js"></script>
 
 </body>
