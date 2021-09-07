@@ -14,12 +14,20 @@
         font-weight: 500;
     }
 
+    &__title::after {
+        content: "";
+        display: block;
+        width: 150px;
+        height: 4px;
+        background-color: #cc3333;
+        margin-top: 20px;
+    }
+
     &__description {
         align-self: end;
         max-height: 300px;
         overflow: hidden;
         line-height: 30px;
-        // letter-spacing: 0.01em;
     }
 
     &__image {
